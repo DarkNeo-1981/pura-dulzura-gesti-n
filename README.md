@@ -86,6 +86,6 @@ Proyecto desarrollado como práctica académica con enfoque en desarrollo backen
 **Nicolás Fasanella**
 
 * LinkedIn: https://www.linkedin.com/in/fasanellanicolas
-* Web: nicolasfasanella.com.ar
+* Web: www.nicolasfasanella.com.ar
 
 ---
