@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{228136C6-B235-477F-A0D5-8810C077C938}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pura_dulzura icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbrirOrdenDePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbrirOrdenDePedido.Designer.cs">
+      <DependentUpon>AbrirOrdenDePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarOrdenDePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarOrdenDePedido.Designer.cs">
+      <DependentUpon>BuscarOrdenDePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambioClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioClave.Designer.cs">
+      <DependentUpon>CambioClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClasificacionProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClasificacionProductos.Designer.cs">
+      <DependentUpon>ClasificacionProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracionMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracionMail.Designer.cs">
+      <DependentUpon>ConfiguracionMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleOrdenCompra.Designer.cs">
+      <DependentUpon>DetalleOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleProveedor.Designer.cs">
+      <DependentUpon>DetalleProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaHelper.cs" />
+    <Compile Include="GestionOrdenesCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionOrdenesCompra.Designer.cs">
+      <DependentUpon>GestionOrdenesCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPagosOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPagosOC.Designer.cs">
+      <DependentUpon>GestionPagosOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionProveedores.Designer.cs">
+      <DependentUpon>GestionProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiquidacionSueldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiquidacionSueldos.Designer.cs">
+      <DependentUpon>LiquidacionSueldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovedadesLiquidacionSueldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovedadesLiquidacionSueldos.Designer.cs">
+      <DependentUpon>NovedadesLiquidacionSueldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoProveedor.Designer.cs">
+      <DependentUpon>ProductoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarCliente.Designer.cs">
+      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurarBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestaurarBackUp.Designer.cs">
+      <DependentUpon>RestaurarBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerClientes.Designer.cs">
+      <DependentUpon>VerClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerProductos.Designer.cs">
+      <DependentUpon>VerProductos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AbrirOrdenDePedido.resx">
+      <DependentUpon>AbrirOrdenDePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarOrdenDePedido.resx">
+      <DependentUpon>BuscarOrdenDePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambioClave.resx">
+      <DependentUpon>CambioClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClasificacionProductos.resx">
+      <DependentUpon>ClasificacionProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfiguracionMail.resx">
+      <DependentUpon>ConfiguracionMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleOrdenCompra.resx">
+      <DependentUpon>DetalleOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleProveedor.resx">
+      <DependentUpon>DetalleProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionOrdenesCompra.resx">
+      <DependentUpon>GestionOrdenesCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPagosOC.resx">
+      <DependentUpon>GestionPagosOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionProveedores.resx">
+      <DependentUpon>GestionProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiquidacionSueldos.resx">
+      <DependentUpon>LiquidacionSueldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCliente.resx">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovedadesLiquidacionSueldos.resx">
+      <DependentUpon>NovedadesLiquidacionSueldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoProveedor.resx">
+      <DependentUpon>ProductoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarCliente.resx">
+      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestaurarBackUp.resx">
+      <DependentUpon>RestaurarBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerClientes.resx">
+      <DependentUpon>VerClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerProductos.resx">
+      <DependentUpon>VerProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{3dde60b1-a07d-4017-b5df-5a5626ebf9bb}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{de1dc009-8881-4142-a5bf-3d6189f6ee60}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MAPPER\MAPPER.csproj">
+      <Project>{0c1d198d-9e93-4fe3-98a9-528ce6be1ba9}</Project>
+      <Name>MAPPER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{e8d7af1b-5449-43e4-86ca-1f016293bb39}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SERVICIOS\Servicios.csproj">
+      <Project>{c0e41a85-d44b-41be-b331-2d74c1c545c2}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security-monitoring_16230771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Logo Pura Dulzura.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pura_dulzura icono.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

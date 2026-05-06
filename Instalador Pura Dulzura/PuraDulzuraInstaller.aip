@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="23.3" version="23.3" Modules="simple" RootPath="." Language="es" Id="{8561164F-91CF-44AF-99D4-67840F8CD41A}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_APP_FILE" Value="[#UI.exe]"/>
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="Esta base de datos del instalador contiene la lógica y los datos necesarios para instalar [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="pura_dulzuraicono.exe" Type="8"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="Pura Dulzura"/>
+    <ROW Property="ProductCode" Value="3082:{7A9D41A2-FE81-4E9D-9007-C1F78A122A11} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Pura Dulzura"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{476E3CE1-3078-43C2-A9FF-6F762980A990}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="AnyCPU_Debug:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="AnyCPU_Debug:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="AnyCPU_Debug:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="AnyCPU_Debug:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="AnyCPU_Debug:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="AnyCPU_Debug:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="AnyCPU_Debug:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="AnyCPU_Debug:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60" MultiBuildValue="AnyCPU_Debug:Windows Vista/Server 2008" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60Display" MultiBuildValue="AnyCPU_Debug:Windows Vista/Server 2008" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1" DirectoryOptions="3"/>
+    <ROW Directory="BackUp_Dir" Directory_Parent="APPDIR" DefaultDir="BackUp" DirectoryOptions="3"/>
+    <ROW Directory="Bitacora_Dir" Directory_Parent="APPDIR" DefaultDir="Bitacora" DirectoryOptions="3"/>
+    <ROW Directory="DB_Dir" Directory_Parent="APPDIR" DefaultDir="DB" DirectoryOptions="3"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Facturas_Dir" Directory_Parent="APPDIR" DefaultDir="Facturas" DirectoryOptions="3"/>
+    <ROW Directory="Novedades_Dir" Directory_Parent="Sueldos_Dir" DefaultDir="NOVEDA~1|Novedades" DirectoryOptions="3"/>
+    <ROW Directory="Recibos_Dir" Directory_Parent="Sueldos_Dir" DefaultDir="Recibos" DirectoryOptions="3"/>
+    <ROW Directory="Resources_Dir" Directory_Parent="APPDIR" DefaultDir="RESOUR~1|Resources" DirectoryOptions="3"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="Sueldos_Dir" Directory_Parent="APPDIR" DefaultDir="Sueldos" DirectoryOptions="3"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="_111234_Dir" Directory_Parent="BackUp_Dir" DefaultDir="202512~1|20251210_111234" DirectoryOptions="3"/>
+    <ROW Directory="__1_Dir" Directory_Parent="__Dir" DefaultDir="11" DirectoryOptions="3"/>
+    <ROW Directory="__2_Dir" Directory_Parent="Recibos_Dir" DefaultDir="2025" DirectoryOptions="3"/>
+    <ROW Directory="__3_Dir" Directory_Parent="__2_Dir" DefaultDir="11" DirectoryOptions="3"/>
+    <ROW Directory="__Dir" Directory_Parent="Novedades_Dir" DefaultDir="2025" DirectoryOptions="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
+    <ROW Component="APPDIR" Value="{3BFD84C9-9257-449C-B467-604081780C72}"/>
+    <ROW Component="ProductInformation" Value="{D5A89DF0-1259-4D3A-AC82-12209475588C}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{3BFD84C9-9257-449C-B467-604081780C72}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="Administrativos.xml" ComponentId="{54D3036C-3A6F-47B3-B476-E3FD2C21F849}" Directory_="_111234_Dir" Attributes="0" KeyPath="Administrativos.xml" Type="0"/>
+    <ROW Component="Administrativos.xml_1" ComponentId="{F30F267A-87AB-46DB-B2DE-CDE157C385A6}" Directory_="DB_Dir" Attributes="0" KeyPath="Administrativos.xml_1" Type="0"/>
+    <ROW Component="BLL.pdb" ComponentId="{1E3C68D0-9D74-4454-911D-5E5568106894}" Directory_="APPDIR" Attributes="0" KeyPath="BLL.dll"/>
+    <ROW Component="Bitacora.xml" ComponentId="{B69FA59A-7289-4555-9D8C-0010B94B5C64}" Directory_="Bitacora_Dir" Attributes="0" KeyPath="Bitacora.xml" Type="0"/>
+    <ROW Component="BouncyCastle.Cryptography.dll" ComponentId="{B532E161-CCD0-4745-9E2A-1A10BD56C649}" Directory_="APPDIR" Attributes="0" KeyPath="BouncyCastle.Cryptography.dll"/>
+    <ROW Component="Configmail.txt" ComponentId="{2F28D2B3-0FB3-49D7-8C21-F66432B9D38B}" Directory_="Resources_Dir" Attributes="0" KeyPath="Configmail.txt" Type="0"/>
+    <ROW Component="DAL.dll" ComponentId="{EC47B45E-1000-49E2-BE6F-5A100F41DAAF}" Directory_="APPDIR" Attributes="0" KeyPath="DAL.dll"/>
+    <ROW Component="ENTITY.dll" ComponentId="{5F9BB73D-188D-4989-9A9F-A7994DAD7D90}" Directory_="APPDIR" Attributes="0" KeyPath="ENTITY.dll"/>
+    <ROW Component="Factura_1.pdf" ComponentId="{3DD1B53D-95C2-4F56-A4F2-8C87977AEA2D}" Directory_="Facturas_Dir" Attributes="0" KeyPath="Factura_1.pdf" Type="0"/>
+    <ROW Component="HtmlRenderer.PdfSharp.dll" ComponentId="{5EC9E756-0323-406D-8032-0E0948D8948B}" Directory_="APPDIR" Attributes="0" KeyPath="HtmlRenderer.PdfSharp.dll"/>
+    <ROW Component="HtmlRenderer.dll" ComponentId="{63BF5E74-BFA5-4457-98A2-E3D68E53C441}" Directory_="APPDIR" Attributes="0" KeyPath="HtmlRenderer.dll"/>
+    <ROW Component="ICSharpCode.SharpZipLib.dll" ComponentId="{F9357F35-B4B0-43E9-A4CF-5F4D0B310F2C}" Directory_="APPDIR" Attributes="0" KeyPath="ICSharpCode.SharpZipLib.dll"/>
+    <ROW Component="MAPPER.dll" ComponentId="{30B23691-31B6-4BD3-9D51-F9C11F070FF6}" Directory_="APPDIR" Attributes="0" KeyPath="MAPPER.dll"/>
+    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{A82ABE5E-C3CA-4737-A7FF-F21C98801029}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Component="Microsoft.Bcl.Cryptography.dll" ComponentId="{3F372086-01FF-4B61-903E-0D74F7CA26F4}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Bcl.Cryptography.dll"/>
+    <ROW Component="Microsoft.CSharp.dll" ComponentId="{C7308C78-CC22-490D-A9D8-0FB5B8A33951}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.CSharp.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInj_1_ection.Abstractions.dll" ComponentId="{2B8463C8-4722-49C4-BE13-01AACFBD3E30}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInjection.dll" ComponentId="{50591DED-2EAB-43B7-9B92-A35144925354}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Abstractions.dll" ComponentId="{3E12B71B-EDA7-477B-9C65-FBFAF89F62A6}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.dll" ComponentId="{51F65872-CCD2-4469-86FB-EBCD089C1C56}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.Logging.dll"/>
+    <ROW Component="Microsoft.Extensions.Options.dll" ComponentId="{05E860AA-312E-499D-932C-3B0A4FA0770D}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.Options.dll"/>
+    <ROW Component="Microsoft.Extensions.Primitives.dll" ComponentId="{5DCA237B-389D-4CF7-8625-E3434DE674C5}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Component="MigraDoc.DocumentObjectModel.dll" ComponentId="{FC0BEBD4-D195-427D-91DE-2466764077C8}" Directory_="APPDIR" Attributes="0" KeyPath="MigraDoc.DocumentObjectModel.dll"/>
+    <ROW Component="MigraDoc.Renderinggdi.dll" ComponentId="{736232A1-E05B-407C-A139-44D65491A2A2}" Directory_="APPDIR" Attributes="0" KeyPath="MigraDoc.Renderinggdi.dll"/>
+    <ROW Component="MigraDoc.RtfRenderinggdi.dll" ComponentId="{62C442CB-D99C-4654-877D-2396A23774E4}" Directory_="APPDIR" Attributes="0" KeyPath="MigraDoc.RtfRenderinggdi.dll"/>
+    <ROW Component="MigraDocCore.DocumentObjectModel.dll" ComponentId="{6AF59651-B828-4E73-A341-588F143668DB}" Directory_="APPDIR" Attributes="0" KeyPath="MigraDocCore.DocumentObjectModel.dll"/>
+    <ROW Component="MigraDocCore.Rendering.dll" ComponentId="{7C110C0C-0584-452B-A391-09C097DDD7F4}" Directory_="APPDIR" Attributes="0" KeyPath="MigraDocCore.Rendering.dll"/>
+    <ROW Component="Novedades.xml" ComponentId="{DE6A53D8-B6DC-4F84-BC00-7E2CEFD1C112}" Directory_="__1_Dir" Attributes="0" KeyPath="Novedades.xml" Type="0"/>
+    <ROW Component="PdfSharp.BarCodes.dll" ComponentId="{36AA31E3-9B17-4A08-A878-99331B3899BA}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.BarCodes.dll"/>
+    <ROW Component="PdfSharp.BarCodesgdi.dll" ComponentId="{7020B179-5BB4-4C8C-898A-A3F5F01316B4}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.BarCodesgdi.dll"/>
+    <ROW Component="PdfSharp.Charting.dll" ComponentId="{21FEBDF0-DD7B-4FF5-8F27-0A635D155EE7}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Charting.dll"/>
+    <ROW Component="PdfSharp.Chartinggdi.dll" ComponentId="{FDCFBEBF-BB65-4E99-B9FA-01CD75A708D7}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Chartinggdi.dll"/>
+    <ROW Component="PdfSharp.Cryptography.dll" ComponentId="{BFB2F842-9773-4DAC-B322-8ADFE5D5B536}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Cryptography.dll"/>
+    <ROW Component="PdfSharp.Quality.dll" ComponentId="{2CE2659E-BB31-4E38-ACA7-5323E88CD6FD}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Quality.dll"/>
+    <ROW Component="PdfSharp.Qualitygdi.dll" ComponentId="{D0B40CE5-6CD8-4100-B5D1-9723FE129171}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Qualitygdi.dll"/>
+    <ROW Component="PdfSharp.Shared.dll" ComponentId="{CF31C797-7601-4CC4-B781-22168110137B}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Shared.dll"/>
+    <ROW Component="PdfSharp.Snippets.dll" ComponentId="{A3B43A3D-9338-417E-B819-D45120E223FA}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Snippets.dll"/>
+    <ROW Component="PdfSharp.Snippetsgdi.dll" ComponentId="{76ABBBA2-9126-4398-B3E7-63B8FF90A13C}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.Snippetsgdi.dll"/>
+    <ROW Component="PdfSharp.System.dll" ComponentId="{0FB66FC2-1409-4A79-86BE-2D913E77AEC9}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.System.dll"/>
+    <ROW Component="PdfSharp.WPFonts.dll" ComponentId="{5474525E-7A44-4114-A01A-5F3077D0D0B3}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.WPFonts.dll"/>
+    <ROW Component="PdfSharp.dll" ComponentId="{8D9A089C-A34B-4441-992D-B5269829DA56}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharp.dll"/>
+    <ROW Component="PdfSharpCore.Charting.dll" ComponentId="{23E51B97-4E7A-41BA-8A42-FF8AF06C6B33}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharpCore.Charting.dll"/>
+    <ROW Component="PdfSharpCore.dll" ComponentId="{5E4A3318-02E0-4A92-9F58-6B00820FBA31}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharpCore.dll"/>
+    <ROW Component="PdfSharpgdi.dll" ComponentId="{B8DD9717-ECC1-4263-91F0-F48C72FBE903}" Directory_="APPDIR" Attributes="0" KeyPath="PdfSharpgdi.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{D5A89DF0-1259-4D3A-AC82-12209475588C}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Recibos.xml" ComponentId="{E6928247-7288-43E1-B7CD-44B7CB668BDE}" Directory_="__3_Dir" Attributes="0" KeyPath="Recibos.xml" Type="0"/>
+    <ROW Component="SERVICIOS.dll" ComponentId="{20C2C1C7-AF21-4215-A5D7-AD7DB8E0F729}" Directory_="APPDIR" Attributes="0" KeyPath="SERVICIOS.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{BE90DB28-5A13-42A9-A697-C9293363DCCE}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="Seguridad.dll" ComponentId="{91EF0B54-9A0D-4138-9A63-FE5D7792173B}" Directory_="APPDIR" Attributes="0" KeyPath="Seguridad.dll"/>
+    <ROW Component="SixLabors.Fonts.dll" ComponentId="{2AF58862-A5FD-46CC-8D63-E5A6B7CDD8BA}" Directory_="APPDIR" Attributes="0" KeyPath="SixLabors.Fonts.dll"/>
+    <ROW Component="SixLabors.ImageSharp.dll" ComponentId="{363502E1-1BE8-4627-8543-37BC0B279613}" Directory_="APPDIR" Attributes="0" KeyPath="SixLabors.ImageSharp.dll"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{3DD684DD-9000-4223-9AB1-668836AA5EFD}" Directory_="APPDIR" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.ComponentModel.DataAnnotations.dll" ComponentId="{C0601A35-2144-49F1-A62E-870384AD235E}" Directory_="APPDIR" Attributes="0" KeyPath="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW Component="System.Configuration.ConfigurationManager.dll" ComponentId="{481092AA-344F-4FF5-950C-26A1D2C0B005}" Directory_="APPDIR" Attributes="0" KeyPath="System.Configuration.ConfigurationManager.dll"/>
+    <ROW Component="System.Configuration.dll" ComponentId="{FDBA2E9E-596E-456D-9751-9F5F21654014}" Directory_="APPDIR" Attributes="0" KeyPath="System.Configuration.dll"/>
+    <ROW Component="System.Core.dll" ComponentId="{AA1BC05D-382C-4F36-B891-DC87AED4B7D9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Core.dll"/>
+    <ROW Component="System.Data.DataSetExtensions.dll" ComponentId="{0BB1C6C3-C875-40CF-A937-C4204C60D4A9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.DataSetExtensions.dll"/>
+    <ROW Component="System.Data.dll" ComponentId="{F477E128-FFC4-4370-B1B4-5B44BE8B38A9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.dll"/>
+    <ROW Component="System.Deployment.dll" ComponentId="{B0739A1A-EAEA-4F42-8BAD-AEB1866CBFD2}" Directory_="APPDIR" Attributes="0" KeyPath="System.Deployment.dll"/>
+    <ROW Component="System.Diagnostics.DiagnosticSource.dll" ComponentId="{B0D86B15-FC81-43FA-8A0F-4EF467665E1A}" Directory_="APPDIR" Attributes="0" KeyPath="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW Component="System.Drawing.dll" ComponentId="{D709F288-A3D6-4E92-93B1-DDD5F2206675}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.dll"/>
+    <ROW Component="System.Formats.Asn1.dll" ComponentId="{AC44C9AE-EA95-4898-B433-162DC0C410FF}" Directory_="APPDIR" Attributes="0" KeyPath="System.Formats.Asn1.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{E7E3F174-8BEA-4D9C-9521-FEA02D7811B6}" Directory_="APPDIR" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Net.Http.dll" ComponentId="{19E3AAC0-6CDC-4439-AE13-A66BF7A5BCF7}" Directory_="APPDIR" Attributes="0" KeyPath="System.Net.Http.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{BF7073BC-7FD2-4379-BAB5-32C088DEF603}" Directory_="APPDIR" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Numerics.dll" ComponentId="{DA87BAE7-026B-40BF-A9DF-7254481CE9DA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Numerics.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{F3B7FA87-C0B4-44ED-8FA7-B3EC777AA22D}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Runtime.InteropServices.RuntimeInformation.dll" ComponentId="{D67C978C-B845-458B-B695-4374904AAA3E}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.InteropServices.RuntimeInformation.dll"/>
+    <ROW Component="System.Security.Cryptography.Pkcs.dll" ComponentId="{4F60B52A-9757-426E-AEA1-C1BE43C1A53A}" Directory_="APPDIR" Attributes="0" KeyPath="System.Security.Cryptography.Pkcs.dll"/>
+    <ROW Component="System.Security.dll" ComponentId="{BD0F15C9-D5EA-4AD2-ABE5-822FD50C865C}" Directory_="APPDIR" Attributes="0" KeyPath="System.Security.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{75704425-D525-4EB6-BD29-6B3A63F38E23}" Directory_="APPDIR" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{E8928CCB-29BC-485D-94DA-647183C9AE60}" Directory_="APPDIR" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="System.Windows.Forms.DataVisualization.dll" ComponentId="{D8E4A922-076B-4156-A4EC-083C7ED94E60}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.DataVisualization.dll"/>
+    <ROW Component="System.Windows.Forms.dll" ComponentId="{D9DCD7C9-E544-4553-B84A-AF61DA6053A4}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.dll"/>
+    <ROW Component="System.Xml.Linq.dll" ComponentId="{3473E5E2-C268-4055-A1B1-AE9694C85160}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
+    <ROW Component="System.Xml.dll" ComponentId="{24A4834D-2312-439B-8238-6D60BF77D852}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
+    <ROW Component="System.dll" ComponentId="{7984BB93-6089-4EA0-90EC-0CF4D2C4C334}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
+    <ROW Component="UI.exe" ComponentId="{312FB605-DB17-4E2A-B691-B8C1D1885703}" Directory_="APPDIR" Attributes="0" KeyPath="UI.exe"/>
+    <ROW Component="UI.exe.config" ComponentId="{25AD928D-9048-4E6F-8636-B0EBF9B91F8C}" Directory_="APPDIR" Attributes="0" KeyPath="UI.exe.config" Type="0"/>
+    <ROW Component="itextsharp.dll" ComponentId="{7FFFB476-23E1-4795-A5C2-F01DFC3D38CA}" Directory_="APPDIR" Attributes="0" KeyPath="itextsharp.dll"/>
+    <ROW Component="mscorlib.dll" ComponentId="{F2C731D7-E964-4E46-ACB5-74D14862F43D}" Directory_="APPDIR" Attributes="0" KeyPath="mscorlib.dll"/>
+    <ROW Component="netstandard.dll" ComponentId="{7EB53BF4-B740-4993-A50F-C5DDB0A81F6D}" Directory_="APPDIR" Attributes="0" KeyPath="netstandard.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="System.Data.DataSetExtensions.dll" Component_="System.Data.DataSetExtensions.dll" FileName="SYSTEM~1.DLL|System.Data.DataSetExtensions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.DataSetExtensions.dll" SelfReg="false"/>
+    <ROW File="itextsharp.dll" Component_="itextsharp.dll" FileName="ITEXTS~1.DLL|itextsharp.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll" SelfReg="false"/>
+    <ROW File="UI.exe" Component_="UI.exe" FileName="UI.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\UI.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="BLL.pdb" Component_="BLL.pdb" FileName="BLL.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\BLL\bin\Debug\BLL.pdb" SelfReg="false"/>
+    <ROW File="System.Runtime.InteropServices.RuntimeInformation.dll" Component_="System.Runtime.InteropServices.RuntimeInformation.dll" FileName="SYSTEM~2.DLL|System.Runtime.InteropServices.RuntimeInformation.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\System.Runtime.InteropServices.RuntimeInformation.dll" SelfReg="false"/>
+    <ROW File="Microsoft.CSharp.dll" Component_="Microsoft.CSharp.dll" FileName="MICROS~1.DLL|Microsoft.CSharp.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Microsoft.CSharp.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTEM~3.DLL|System.Memory.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll" SelfReg="false"/>
+    <ROW File="MAPPER.dll" Component_="MAPPER.dll" FileName="MAPPER.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\BLL\bin\Debug\MAPPER.dll" SelfReg="false"/>
+    <ROW File="DAL.pdb" Component_="BLL.pdb" FileName="DAL.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\DAL\bin\Debug\DAL.pdb" SelfReg="false"/>
+    <ROW File="Seguridad.pdb" Component_="BLL.pdb" FileName="SEGURI~1.PDB|Seguridad.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\Seguridad\bin\Debug\Seguridad.pdb" SelfReg="false"/>
+    <ROW File="SERVICIOS.pdb" Component_="BLL.pdb" FileName="SERVIC~1.PDB|SERVICIOS.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\SERVICIOS\bin\Debug\SERVICIOS.pdb" SelfReg="false"/>
+    <ROW File="ENTITY.dll" Component_="ENTITY.dll" FileName="ENTITY.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\ENTITY\bin\Debug\ENTITY.dll" SelfReg="false"/>
+    <ROW File="BLL.dll" Component_="BLL.pdb" FileName="BLL.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\BLL\bin\Debug\BLL.dll" SelfReg="false"/>
+    <ROW File="SERVICIOS.dll" Component_="SERVICIOS.dll" FileName="SERVIC~1.DLL|SERVICIOS.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\DAL\bin\Debug\SERVICIOS.dll" SelfReg="false"/>
+    <ROW File="Seguridad.dll" Component_="Seguridad.dll" FileName="SEGURI~1.DLL|Seguridad.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\Seguridad\bin\Debug\Seguridad.dll" SelfReg="false"/>
+    <ROW File="UI.exe.config" Component_="UI.exe.config" FileName="UIEXE~1.CON|UI.exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\UI.exe.config" SelfReg="false"/>
+    <ROW File="MigraDoc.DocumentObjectModel.dll" Component_="MigraDoc.DocumentObjectModel.dll" FileName="MIGRAD~1.DLL|MigraDoc.DocumentObjectModel.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\BLL\bin\Debug\MigraDoc.DocumentObjectModel.dll" SelfReg="false"/>
+    <ROW File="BouncyCastle.Cryptography.dll" Component_="BouncyCastle.Cryptography.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Cryptography.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll" SelfReg="false"/>
+    <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTEM~4.DLL|System.Drawing.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Drawing.dll" SelfReg="false"/>
+    <ROW File="System.Data.dll" Component_="System.Data.dll" FileName="SYSTEM~5.DLL|System.Data.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" SelfReg="false"/>
+    <ROW File="netstandard.dll" Component_="netstandard.dll" FileName="NETSTA~1.DLL|netstandard.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\netstandard.dll" SelfReg="false"/>
+    <ROW File="mscorlib.dll" Component_="mscorlib.dll" FileName="mscorlib.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.DiagnosticSource.dll" Component_="System.Diagnostics.DiagnosticSource.dll" FileName="SYSTEM~6.DLL|System.Diagnostics.DiagnosticSource.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Diagnostics.DiagnosticSource.9.0.10\lib\net462\System.Diagnostics.DiagnosticSource.dll" SelfReg="false"/>
+    <ROW File="System.Core.dll" Component_="System.Core.dll" FileName="SYSTEM~7.DLL|System.Core.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Core.dll" SelfReg="false"/>
+    <ROW File="System.Deployment.dll" Component_="System.Deployment.dll" FileName="SYSTEM~8.DLL|System.Deployment.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Deployment.dll" SelfReg="false"/>
+    <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll" SelfReg="false"/>
+    <ROW File="LogoPuraDulzura.jpg" Component_="UI.exe.config" FileName="LOGOPU~1.JPG|Logo Pura Dulzura.jpg" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Resources\Logo Pura Dulzura.jpg" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.dll" Component_="Microsoft.Bcl.AsyncInterfaces.dll" FileName="MICROS~2.DLL|Microsoft.Bcl.AsyncInterfaces.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Bcl.AsyncInterfaces.9.0.10\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll" SelfReg="false"/>
+    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTEM~9.DLL|System.Net.Http.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Windows.Forms.DataVisualization.dll" Component_="System.Windows.Forms.DataVisualization.dll" FileName="SYSTE~10.DLL|System.Windows.Forms.DataVisualization.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.DataVisualization.dll" SelfReg="false"/>
+    <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTE~11.DLL|System.Windows.Forms.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll" SelfReg="false"/>
+    <ROW File="System.Xml.dll" Component_="System.Xml.dll" FileName="SYSTE~12.DLL|System.Xml.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" SelfReg="false"/>
+    <ROW File="System.Xml.Linq.dll" Component_="System.Xml.Linq.dll" FileName="SYSTE~13.DLL|System.Xml.Linq.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.Linq.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.dll" Component_="Microsoft.Extensions.DependencyInjection.dll" FileName="MICROS~3.DLL|Microsoft.Extensions.DependencyInjection.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Extensions.DependencyInjection.9.0.10\lib\net462\Microsoft.Extensions.DependencyInjection.dll" SelfReg="false"/>
+    <ROW File="MigraDoc.Renderinggdi.dll" Component_="MigraDoc.Renderinggdi.dll" FileName="MIGRAD~2.DLL|MigraDoc.Rendering-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-MigraDoc-GDI.6.2.2\lib\net462\MigraDoc.Rendering-gdi.dll" SelfReg="false"/>
+    <ROW File="DAL.dll" Component_="DAL.dll" FileName="DAL.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\DAL\bin\Debug\DAL.dll" SelfReg="false"/>
+    <ROW File="PdfSharpgdi.dll" Component_="PdfSharpgdi.dll" FileName="PDFSHA~1.DLL|PdfSharp-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp-gdi.dll" SelfReg="false"/>
+    <ROW File="System.Security.dll" Component_="System.Security.dll" FileName="SYSTE~14.DLL|System.Security.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Security.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="Microsoft.Extensions.DependencyInj_1_ection.Abstractions.dll" FileName="MICROS~4.DLL|Microsoft.Extensions.DependencyInjection.Abstractions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Shared.dll" Component_="PdfSharp.Shared.dll" FileName="PDFSHA~2.DLL|PdfSharp.Shared.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.Shared.dll" SelfReg="false"/>
+    <ROW File="HtmlRenderer.PdfSharp.dll" Component_="HtmlRenderer.PdfSharp.dll" FileName="HTMLRE~1.DLL|HtmlRenderer.PdfSharp.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTE~15.DLL|System.Runtime.CompilerServices.Unsafe.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="Microsoft.Extensions.Logging.Abstractions.dll" FileName="MICROS~5.DLL|Microsoft.Extensions.Logging.Abstractions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Extensions.Logging.Abstractions.9.0.10\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTE~16.DLL|System.ValueTuple.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\System.ValueTuple.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTE~17.DLL|System.Threading.Tasks.Extensions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.System.dll" Component_="PdfSharp.System.dll" FileName="PDFSHA~3.DLL|PdfSharp.System.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.System.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Chartinggdi.dll" Component_="PdfSharp.Chartinggdi.dll" FileName="PDFSHA~4.DLL|PdfSharp.Charting-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.Charting-gdi.dll" SelfReg="false"/>
+    <ROW File="UI.pdb" Component_="UI.exe" FileName="UI.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\UI.pdb" SelfReg="false"/>
+    <ROW File="System.Numerics.dll" Component_="System.Numerics.dll" FileName="SYSTE~18.DLL|System.Numerics.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Numerics.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTE~19.DLL|System.Buffers.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTE~20.DLL|System.Numerics.Vectors.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="ENTITY.pdb" Component_="ENTITY.dll" FileName="ENTITY.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\ENTITY\bin\Debug\ENTITY.pdb" SelfReg="false"/>
+    <ROW File="MAPPER.pdb" Component_="MAPPER.dll" FileName="MAPPER.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\MAPPER\bin\Debug\MAPPER.pdb" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.Cryptography.dll" Component_="Microsoft.Bcl.Cryptography.dll" FileName="MICROS~6.DLL|Microsoft.Bcl.Cryptography.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Bcl.Cryptography.9.0.10\lib\net462\Microsoft.Bcl.Cryptography.dll" SelfReg="false"/>
+    <ROW File="HtmlRenderer.dll" Component_="HtmlRenderer.dll" FileName="HTMLRE~2.DLL|HtmlRenderer.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.dll" SelfReg="false"/>
+    <ROW File="ICSharpCode.SharpZipLib.dll" Component_="ICSharpCode.SharpZipLib.dll" FileName="ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.dll" Component_="Microsoft.Extensions.Logging.dll" FileName="MICROS~7.DLL|Microsoft.Extensions.Logging.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Extensions.Logging.9.0.10\lib\net462\Microsoft.Extensions.Logging.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Options.dll" Component_="Microsoft.Extensions.Options.dll" FileName="MICROS~8.DLL|Microsoft.Extensions.Options.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Extensions.Options.9.0.10\lib\net462\Microsoft.Extensions.Options.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="Microsoft.Extensions.Primitives.dll" FileName="MICROS~9.DLL|Microsoft.Extensions.Primitives.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\Microsoft.Extensions.Primitives.9.0.10\lib\net462\Microsoft.Extensions.Primitives.dll" SelfReg="false"/>
+    <ROW File="MigraDoc.RtfRenderinggdi.dll" Component_="MigraDoc.RtfRenderinggdi.dll" FileName="MIGRAD~3.DLL|MigraDoc.RtfRendering-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-MigraDoc-GDI.6.2.2\lib\net462\MigraDoc.RtfRendering-gdi.dll" SelfReg="false"/>
+    <ROW File="MigraDocCore.DocumentObjectModel.dll" Component_="MigraDocCore.DocumentObjectModel.dll" FileName="MIGRAD~4.DLL|MigraDocCore.DocumentObjectModel.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\MigraDocCore.DocumentObjectModel.1.3.67\lib\netstandard2.0\MigraDocCore.DocumentObjectModel.dll" SelfReg="false"/>
+    <ROW File="MigraDocCore.Rendering.dll" Component_="MigraDocCore.Rendering.dll" FileName="MIGRAD~5.DLL|MigraDocCore.Rendering.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\MigraDocCore.Rendering.1.3.67\lib\netstandard2.0\MigraDocCore.Rendering.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.BarCodesgdi.dll" Component_="PdfSharp.BarCodesgdi.dll" FileName="PDFSHA~5.DLL|PdfSharp.BarCodes-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.BarCodes-gdi.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Pkcs.dll" Component_="System.Security.Cryptography.Pkcs.dll" FileName="SYSTE~21.DLL|System.Security.Cryptography.Pkcs.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Security.Cryptography.Pkcs.9.0.10\lib\net462\System.Security.Cryptography.Pkcs.dll" SelfReg="false"/>
+    <ROW File="System.Configuration.ConfigurationManager.dll" Component_="System.Configuration.ConfigurationManager.dll" FileName="SYSTE~22.DLL|System.Configuration.ConfigurationManager.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Configuration.ConfigurationManager.9.0.10\lib\net462\System.Configuration.ConfigurationManager.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.BarCodes.dll" Component_="PdfSharp.BarCodes.dll" FileName="PDFSHA~6.DLL|PdfSharp.BarCodes.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp.6.2.2\lib\netstandard2.0\PdfSharp.BarCodes.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Charting.dll" Component_="PdfSharp.Charting.dll" FileName="PDFSHA~7.DLL|PdfSharp.Charting.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp.6.2.2\lib\netstandard2.0\PdfSharp.Charting.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Cryptography.dll" Component_="PdfSharp.Cryptography.dll" FileName="PDFSHA~8.DLL|PdfSharp.Cryptography.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.Cryptography.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.dll" Component_="PdfSharp.dll" FileName="PdfSharp.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp.6.2.2\lib\netstandard2.0\PdfSharp.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Qualitygdi.dll" Component_="PdfSharp.Qualitygdi.dll" FileName="PDFSHA~9.DLL|PdfSharp.Quality-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.Quality-gdi.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Quality.dll" Component_="PdfSharp.Quality.dll" FileName="PDFSH~10.DLL|PdfSharp.Quality.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp.6.2.2\lib\netstandard2.0\PdfSharp.Quality.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Snippetsgdi.dll" Component_="PdfSharp.Snippetsgdi.dll" FileName="PDFSH~11.DLL|PdfSharp.Snippets-gdi.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.Snippets-gdi.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.Snippets.dll" Component_="PdfSharp.Snippets.dll" FileName="PDFSH~12.DLL|PdfSharp.Snippets.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp.6.2.2\lib\netstandard2.0\PdfSharp.Snippets.dll" SelfReg="false"/>
+    <ROW File="PdfSharp.WPFonts.dll" Component_="PdfSharp.WPFonts.dll" FileName="PDFSH~13.DLL|PdfSharp.WPFonts.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PDFsharp-GDI.6.2.2\lib\net462\PdfSharp.WPFonts.dll" SelfReg="false"/>
+    <ROW File="PdfSharpCore.Charting.dll" Component_="PdfSharpCore.Charting.dll" FileName="PDFSH~14.DLL|PdfSharpCore.Charting.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PdfSharpCore.Charting.1.3.67\lib\netstandard2.0\PdfSharpCore.Charting.dll" SelfReg="false"/>
+    <ROW File="PdfSharpCore.dll" Component_="PdfSharpCore.dll" FileName="PDFSH~15.DLL|PdfSharpCore.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\PdfSharpCore.1.3.67\lib\netstandard2.0\PdfSharpCore.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll" Component_="SixLabors.Fonts.dll" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="SixLabors.ImageSharp.dll" Component_="SixLabors.ImageSharp.dll" FileName="SIXLAB~2.DLL|SixLabors.ImageSharp.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\SixLabors.ImageSharp.1.0.4\lib\net472\SixLabors.ImageSharp.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.DataAnnotations.dll" Component_="System.ComponentModel.DataAnnotations.dll" FileName="SYSTE~23.DLL|System.ComponentModel.DataAnnotations.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.ComponentModel.DataAnnotations.dll" SelfReg="false"/>
+    <ROW File="System.Configuration.dll" Component_="System.Configuration.dll" FileName="SYSTE~24.DLL|System.Configuration.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Configuration.dll" SelfReg="false"/>
+    <ROW File="System.Formats.Asn1.dll" Component_="System.Formats.Asn1.dll" FileName="SYSTE~25.DLL|System.Formats.Asn1.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\packages\System.Formats.Asn1.9.0.10\lib\net462\System.Formats.Asn1.dll" SelfReg="false"/>
+    <ROW File="Administrativos.xml" Component_="Administrativos.xml" FileName="ADMINI~1.XML|Administrativos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Administrativos.xml" SelfReg="false"/>
+    <ROW File="ClasificacionProductos.xml" Component_="Administrativos.xml" FileName="CLASIF~1.XML|ClasificacionProductos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\ClasificacionProductos.xml" SelfReg="false"/>
+    <ROW File="Clientes.xml" Component_="Administrativos.xml" FileName="Clientes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Clientes.xml" SelfReg="false"/>
+    <ROW File="Encargados.xml" Component_="Administrativos.xml" FileName="ENCARG~1.XML|Encargados.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Encargados.xml" SelfReg="false"/>
+    <ROW File="Gerentes.xml" Component_="Administrativos.xml" FileName="Gerentes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Gerentes.xml" SelfReg="false"/>
+    <ROW File="Jefes.xml" Component_="Administrativos.xml" FileName="Jefes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Jefes.xml" SelfReg="false"/>
+    <ROW File="Menus.xml" Component_="Administrativos.xml" FileName="Menus.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Menus.xml" SelfReg="false"/>
+    <ROW File="OrdenesCompra.xml" Component_="Administrativos.xml" FileName="ORDENE~1.XML|OrdenesCompra.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\OrdenesCompra.xml" SelfReg="false"/>
+    <ROW File="OrdenesDePedido.xml" Component_="Administrativos.xml" FileName="ORDENE~2.XML|OrdenesDePedido.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\OrdenesDePedido.xml" SelfReg="false"/>
+    <ROW File="Padres_Hijos.xml" Component_="Administrativos.xml" FileName="PADRES~1.XML|Padres_Hijos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Padres_Hijos.xml" SelfReg="false"/>
+    <ROW File="Permisos.xml" Component_="Administrativos.xml" FileName="Permisos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Permisos.xml" SelfReg="false"/>
+    <ROW File="Permisos_Menu.xml" Component_="Administrativos.xml" FileName="PERMIS~1.XML|Permisos_Menu.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Permisos_Menu.xml" SelfReg="false"/>
+    <ROW File="Productos.xml" Component_="Administrativos.xml" FileName="PRODUC~1.XML|Productos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Productos.xml" SelfReg="false"/>
+    <ROW File="ProductosProveedor.xml" Component_="Administrativos.xml" FileName="PRODUC~2.XML|ProductosProveedor.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\ProductosProveedor.xml" SelfReg="false"/>
+    <ROW File="Proveedores.xml" Component_="Administrativos.xml" FileName="PROVEE~1.XML|Proveedores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Proveedores.xml" SelfReg="false"/>
+    <ROW File="Supervisores.xml" Component_="Administrativos.xml" FileName="SUPERV~1.XML|Supervisores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Supervisores.xml" SelfReg="false"/>
+    <ROW File="Usuarios.xml" Component_="Administrativos.xml" FileName="Usuarios.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Usuarios.xml" SelfReg="false"/>
+    <ROW File="Vendedores.xml" Component_="Administrativos.xml" FileName="VENDED~1.XML|Vendedores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\BackUp\20251210_111234\Vendedores.xml" SelfReg="false"/>
+    <ROW File="Bitacora.xml" Component_="Bitacora.xml" FileName="Bitacora.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Bitacora\Bitacora.xml" SelfReg="false"/>
+    <ROW File="Administrativos.xml_1" Component_="Administrativos.xml_1" FileName="ADMINI~1.XML|Administrativos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Administrativos.xml" SelfReg="false"/>
+    <ROW File="ClasificacionProductos.xml_1" Component_="Administrativos.xml_1" FileName="CLASIF~1.XML|ClasificacionProductos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\ClasificacionProductos.xml" SelfReg="false"/>
+    <ROW File="Clientes.xml_1" Component_="Administrativos.xml_1" FileName="Clientes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Clientes.xml" SelfReg="false"/>
+    <ROW File="Encargados.xml_1" Component_="Administrativos.xml_1" FileName="ENCARG~1.XML|Encargados.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Encargados.xml" SelfReg="false"/>
+    <ROW File="Gerentes.xml_1" Component_="Administrativos.xml_1" FileName="Gerentes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Gerentes.xml" SelfReg="false"/>
+    <ROW File="Jefes.xml_1" Component_="Administrativos.xml_1" FileName="Jefes.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Jefes.xml" SelfReg="false"/>
+    <ROW File="Menus.xml_1" Component_="Administrativos.xml_1" FileName="Menus.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Menus.xml" SelfReg="false"/>
+    <ROW File="OrdenesCompra.xml_1" Component_="Administrativos.xml_1" FileName="ORDENE~1.XML|OrdenesCompra.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\OrdenesCompra.xml" SelfReg="false"/>
+    <ROW File="OrdenesDePedido.xml_1" Component_="Administrativos.xml_1" FileName="ORDENE~2.XML|OrdenesDePedido.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\OrdenesDePedido.xml" SelfReg="false"/>
+    <ROW File="Padres_Hijos.xml_1" Component_="Administrativos.xml_1" FileName="PADRES~1.XML|Padres_Hijos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Padres_Hijos.xml" SelfReg="false"/>
+    <ROW File="Permisos.xml_1" Component_="Administrativos.xml_1" FileName="Permisos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Permisos.xml" SelfReg="false"/>
+    <ROW File="Permisos_Menu.xml_1" Component_="Administrativos.xml_1" FileName="PERMIS~1.XML|Permisos_Menu.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Permisos_Menu.xml" SelfReg="false"/>
+    <ROW File="Productos.xml_1" Component_="Administrativos.xml_1" FileName="PRODUC~1.XML|Productos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Productos.xml" SelfReg="false"/>
+    <ROW File="ProductosProveedor.xml_1" Component_="Administrativos.xml_1" FileName="PRODUC~2.XML|ProductosProveedor.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\ProductosProveedor.xml" SelfReg="false"/>
+    <ROW File="Proveedores.xml_1" Component_="Administrativos.xml_1" FileName="PROVEE~1.XML|Proveedores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Proveedores.xml" SelfReg="false"/>
+    <ROW File="Supervisores.xml_1" Component_="Administrativos.xml_1" FileName="SUPERV~1.XML|Supervisores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Supervisores.xml" SelfReg="false"/>
+    <ROW File="Usuarios.xml_1" Component_="Administrativos.xml_1" FileName="Usuarios.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Usuarios.xml" SelfReg="false"/>
+    <ROW File="Vendedores.xml_1" Component_="Administrativos.xml_1" FileName="VENDED~1.XML|Vendedores.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\DB\Vendedores.xml" SelfReg="false"/>
+    <ROW File="Factura_1.pdf" Component_="Factura_1.pdf" FileName="FACTUR~1.PDF|Factura_1.pdf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Facturas\Factura_1.pdf" SelfReg="false"/>
+    <ROW File="Factura_2.pdf" Component_="Factura_1.pdf" FileName="FACTUR~2.PDF|Factura_2.pdf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Facturas\Factura_2.pdf" SelfReg="false"/>
+    <ROW File="Factura_3.pdf" Component_="Factura_1.pdf" FileName="FACTUR~3.PDF|Factura_3.pdf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Facturas\Factura_3.pdf" SelfReg="false"/>
+    <ROW File="Factura_4.pdf" Component_="Factura_1.pdf" FileName="FACTUR~4.PDF|Factura_4.pdf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Facturas\Factura_4.pdf" SelfReg="false"/>
+    <ROW File="Factura_5.pdf" Component_="Factura_1.pdf" FileName="FACTUR~5.PDF|Factura_5.pdf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Facturas\Factura_5.pdf" SelfReg="false"/>
+    <ROW File="Configmail.txt" Component_="Configmail.txt" FileName="CONFIG~1.TXT|Config mail.txt" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Resources\Config mail.txt" SelfReg="false"/>
+    <ROW File="LogoPuraDulzura.jpg_1" Component_="Configmail.txt" FileName="LOGOPU~1.JPG|Logo Pura Dulzura.jpg" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Resources\Logo Pura Dulzura.jpg" SelfReg="false"/>
+    <ROW File="Novedades.xml" Component_="Novedades.xml" FileName="NOVEDA~1.XML|Novedades.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Sueldos\Novedades\2025\11\Novedades.xml" SelfReg="false"/>
+    <ROW File="Recibos.xml" Component_="Recibos.xml" FileName="Recibos.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\PuraDulzuraTF\UI\bin\Debug\Sueldos\Recibos\2025\11\Recibos.xml" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="AnyCPU_Debug" BuildName="AnyCPU_Debug" BuildOrder="1" BuildType="0" Languages="es" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_es.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="LaunchApp"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_PinShortcuts" Type="1" Source="ShortcutFlags.dll" Target="PinShortcuts"/>
+    <ROW Action="AI_PinToStartScreen" Type="1025" Source="ShortcutFlags.dll" Target="PinToStartScreen" WithoutSeq="true"/>
+    <ROW Action="AI_PinToTaskbar" Type="1025" Source="ShortcutFlags.dll" Target="PinToTaskbar" WithoutSeq="true"/>
+    <ROW Action="AI_PrepareShortcutFlags" Type="1" Source="ShortcutFlags.dll" Target="PrepareActionData"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_UnpinFromStartScreen" Type="1025" Source="ShortcutFlags.dll" Target="UnpinFromStartScreen" WithoutSeq="true"/>
+    <ROW Action="AI_UnpinFromTaskbar" Type="1025" Source="ShortcutFlags.dll" Target="UnpinFromTaskbar" WithoutSeq="true"/>
+    <ROW Action="AI_UnpinShortcuts" Type="1" Source="ShortcutFlags.dll" Target="UnpinShortcuts"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.DataSetExtensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="itextsharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="UI.exe"/>
+    <ROW Feature_="MainFeature" Component_="BLL.pdb"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.InteropServices.RuntimeInformation.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.CSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="MAPPER.dll"/>
+    <ROW Feature_="MainFeature" Component_="ENTITY.dll"/>
+    <ROW Feature_="MainFeature" Component_="SERVICIOS.dll"/>
+    <ROW Feature_="MainFeature" Component_="Seguridad.dll"/>
+    <ROW Feature_="MainFeature" Component_="UI.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="MigraDoc.DocumentObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="BouncyCastle.Cryptography.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Drawing.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.dll"/>
+    <ROW Feature_="MainFeature" Component_="netstandard.dll"/>
+    <ROW Feature_="MainFeature" Component_="mscorlib.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Deployment.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Http.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.DataVisualization.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.Linq.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Feature_="MainFeature" Component_="MigraDoc.Renderinggdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="DAL.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharpgdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInj_1_ection.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Shared.dll"/>
+    <ROW Feature_="MainFeature" Component_="HtmlRenderer.PdfSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ValueTuple.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.System.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Chartinggdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.Cryptography.dll"/>
+    <ROW Feature_="MainFeature" Component_="HtmlRenderer.dll"/>
+    <ROW Feature_="MainFeature" Component_="ICSharpCode.SharpZipLib.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Options.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="MigraDoc.RtfRenderinggdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="MigraDocCore.DocumentObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="MigraDocCore.Rendering.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.BarCodesgdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Pkcs.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Configuration.ConfigurationManager.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.BarCodes.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Charting.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Cryptography.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Qualitygdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Quality.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Snippetsgdi.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.Snippets.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharp.WPFonts.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharpCore.Charting.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfSharpCore.dll"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.ImageSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Configuration.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Formats.Asn1.dll"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="Administrativos.xml"/>
+    <ROW Feature_="MainFeature" Component_="Bitacora.xml"/>
+    <ROW Feature_="MainFeature" Component_="Administrativos.xml_1"/>
+    <ROW Feature_="MainFeature" Component_="Factura_1.pdf"/>
+    <ROW Feature_="MainFeature" Component_="Configmail.txt"/>
+    <ROW Feature_="MainFeature" Component_="Novedades.xml"/>
+    <ROW Feature_="MainFeature" Component_="Recibos.xml"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="pura_dulzuraicono.exe" SourcePath="..\PuraDulzuraTF\UI\pura_dulzura icono.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
+    <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
+    <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] no se puede instalar en [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="AnyCPU_Debug"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] no se puede instalar en [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="AnyCPU_Debug"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] no se puede instalar en [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="AnyCPU_Debug"/>
+    <ROW Condition="(VersionNT &lt;&gt; 600)" Description="[ProductName] no se puede instalar en [WindowsTypeNT60Display]." DescriptionLocId="AI.LaunchCondition.NoNT60" IsPredefined="true" Builds="AnyCPU_Debug"/>
+    <ROW Condition="VersionNT" Description="[ProductName] no se puede instalar en [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="AnyCPU_Debug"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="PuraDulzura.exe" Directory_="SHORTCUTDIR" Name="PURADU~1.EXE|PuraDulzura.exe" Component_="UI.exe" Target="[#UI.exe]" Description="PuraDulzura.exe" Hotkey="0" Icon_="pura_dulzuraicono.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
+    <ROW Shortcut="PuraDulzura.exe_1" Directory_="DesktopFolder" Name="PURADU~1.EXE|PuraDulzura.exe" Component_="UI.exe" Target="[#UI.exe]" Description="PuraDulzura.exe" Hotkey="0" Icon_="pura_dulzuraicono.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
